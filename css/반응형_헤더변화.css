@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+/* reset */
+* {margin: 0; padding: 0; font-size: inherit; box-sizing: border-box;}
+ul, ol {list-style: none;}
+a {color: inherit; text-decoration: none;}
+
+body {color: #333; line-height: 1;}
+
+/* mobile */
+.mobile_gnb {display: none;}
+.mobile {display: none;}
+
+/* header */
+header {
+    width: calc(100% - 60px);
+    height: 100px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    transform: translateX(-50%);
+    z-index: 99;
+}
+header div {
+    max-width: 1280px;
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header div h1 {
+    font-size: 20px;
+}
+header div .pc_gnb { 
+    height: 100%;
+}
+header div .pc_gnb > ul {
+    display: flex;
+    justify-content: end;
+    text-align: center;
+}
+header div .pc_gnb > ul > li {
+     
+}
+header div .pc_gnb > ul > li > a {
+    line-height: 100px;
+    display: block;
+    padding: 0 40px;
+    font-size: 17px;
+    font-weight: bold;
+}
+header div .pc_gnb .sub_menu {
+    background-color: rgba(255, 255, 255);
+    padding: 20px 0;
+    display: none;
+}
+header div .pc_gnb .sub_menu li {
+    line-height: 3;
+}
+header div .pc_gnb > ul > li:hover .sub_menu {
+    display: block;
+}
+/* .main_visual */
+.main_visual {
+    height: 100vh;
+    position: relative;
+}
+.main_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main_visual div {
+    max-width: 1280px;
+    width: 98%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+.main_visual div h2 {
+    font-size: 50px;
+}
+.main_visual div p {
+    font-size: 20px;
+    margin: 10px 0 30px;
+    text-shadow: 1px 1px 0 rgba(255, 0, 0, 0.832);
+    font-weight: bold;
+}
+.main_visual div a {
+    height: 40px;
+    line-height: 35px;
+    display: inline-block;
+    padding: 0 40px;
+    background-color: #d5493d;
+    border-radius: 20px;
+    font-size: 17px;    
+}
+
+/* .cont01 */
+.cont01 {
+    margin: 100px 0;
+}
+.cont01 .cont {
+    max-width: 1280px;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.cont01 .cont figure {
+    width: 32%; 
+    height: 450px;
+}
+.cont01 .cont figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cont01 .cont div {
+    width: 32%;
+}
+.cont01 .cont div h3 {
+    font-size: 40px;
+}
+.cont01 .cont div p {
+    line-height: 1.2;
+    margin: 20px 0 30px;
+}
+.cont01 .cont div .btn {
+    height: 40px;
+    line-height: 35px;
+    border-radius: 20px;
+    display: inline-block;
+    background-color: #d5493d;
+    padding: 0 40px;
+    color: #fff;
+}
+
+footer {
+    padding: 50px 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+@media screen and (max-width: 1024px) {
+    header {width: calc(100% - 20px); top: 10px; height: 60px;}
+    header div .pc_gnb {display: none;}
+    .mobile {display: block;}
+    .mobile span {position: absolute; left: -999px;}
+
+    /* .cont01 */
+    .cont01 .cont figure {width: 49%;}
+    .cont01 .cont div {width: 100%; margin-top: 30px;}
+    .cont01 .cont div p {margin: 10px 0 30px;}
+}
+ 
+@media screen and (max-width: 640px) {
+    .main_visual div h2 {font-size: 30px;}
+    .main_visual div p {font-size: 17px;}
+    .main_visual div a {font-size: 16px;}
+
+    /* .cont01 */
+    .cont01 {margin: 70px 0;}
+    .cont01 .cont figure {width: 100%; height: 280px; margin-bottom: 15px;}
+    .cont01 .cont div {margin-top: 10px;}
+    .cont01 .cont div h3 {font-size: 25px}
+
+    footer {padding: 30px 0;}
+}
